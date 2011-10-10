@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Slider Evolution &raquo; Help File</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" type="text/css" href="help/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="help/css/style.css" />
+
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/default/jquery.slider.css" />
+  <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/default/jquery.slider.ie6.css" />
+  <![endif]-->
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/slider/jquery.slider.js"></script>
+  
+  <style type="text/css">
+  .caption
+  {
+    display:none;
+  }
+  
+  .caption h4
+  {
+    margin:0;
+  }
+  </style>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".slider").slideshow({
+        width      : 900,
+        height     : 325,
+        pauseOnHover : false,
+        transition : ['slideLeft', 'slideRight', 'slideTop', 'slideBottom']
+      });
+      
+      $(".caption").fadeIn(500);
+
+      // playing with events:
+      
+      $(".slider").bind("sliderChange", function(event, curSlide) {
+        $(curSlide).children(".caption").hide();
+      });
+      
+      $(".slider").bind("sliderTransitionFinishes", function(event, curSlide) {
+        $(curSlide).children(".caption").fadeIn(500);
+      });
+    });
+  </script>
+
+</head>
+
+<body class="home">
+
+  <div id="wrapper">
+  
+    <h1 class="big">jQuery Slider Evolution</h1>
+    <h1 class="big">Documentation</h1>
+    <h2 class="big">By aeroalquimia</h2>
+    
+    
+    
+    
+    
+    
+    <div class="slider">
+      <div>
+        <div class="caption">
+          <h4>First Slide</h4>
+        </div>
+        <img src="assets/slide_6.jpg" alt=""/>
+      </div>
+      
+      <div>
+        <div class="caption">
+          <h4>Second Slide</h4>
+        </div>
+        <img src="assets/slide_9.jpg" alt=""/>
+      </div>
+      
+      <div>
+        <div class="caption">
+          <h4>Third Slide</h4>
+        </div>
+        <img src="assets/slide_7.jpg" alt=""/>
+      </div>
+      
+      <div>
+        <div class="caption">
+          <h4>Fourth Slide</h4>
+        </div>
+        <img src="assets/slide_3.jpg" alt=""/>
+      </div>
+    </div>
+
+<h3>Source Code</h3>
+<h4>HTML</h4>
+<pre>
+&lt;div class="slider"&gt;
+  &lt;div&gt;
+    &lt;img src="assets/slide_6.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;img src="assets/slide_9.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;img src="assets/slide_7.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;img src="assets/slide_3.jpg" alt=""/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<h4>CSS</h4>
+<pre>
+.caption
+{
+  display:none;
+}
+</pre>
+
+<h4>Javascript</h4>
+<pre>
+jQuery(document).ready(function($) {
+  $(".slider").slideshow({
+    width      : 900,
+    height     : 325,
+    pauseOnHover : false,
+    transition : ['slideLeft', 'slideRight', 'slideTop', 'slideBottom']
+  });
+  
+  $(".caption").fadeIn(500);
+  
+  // playing with events:
+  
+  $(".slider").bind("sliderChange", function(event, curSlide) {
+    $(curSlide).children(".caption").hide();
+  });
+  
+  $(".slider").bind("sliderTransitionFinishes", function(event, curSlide) {
+    $(curSlide).children(".caption").fadeIn(500);
+  });
+});
+</pre>
+
+
+
+
+   
+    <div class="alert">
+      <p><a href="http://codecanyon.net/user/aeroalquimia">aeroalquimia</a> (Eduardo Daniel Sada)<br/>
+      <strong>Buenos Aires, Argentina.</strong> Apr 2011</p>
+    </div>
+    
+  </div><!--/wrapper-->
+</body>
+</html>

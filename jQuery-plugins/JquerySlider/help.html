@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Slider Evolution &raquo; Help File</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" type="text/css" href="help/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="help/css/style.css" />
+
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/carbono/jquery.slider.css" />
+  <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/carbono/jquery.slider.ie6.css" />
+  <![endif]-->
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/slider/jquery.slider.min.js"></script>
+
+</head>
+
+<body class="home">
+
+  <div id="wrapper">
+  
+    <h1 class="big">jQuery Slider Evolution</h1>
+    <h1 class="big">Documentation</h1>
+    <h2 class="big">By aeroalquimia</h2>
+    
+    <div class="alert">
+      <p>If you have any question that are beyond the scope of this help file, please feel free to <a href="http://codecanyon.net/forums/topic/codecanyon/65">join the discussion</a> or <a href="http://codecanyon.net/user/aeroalquimia">email me via my user page contact form</a>. Thanks so much!</p>
+    </div>
+    
+    <h1>Table of <strong>Contents</strong></h1>
+    <h6><a href="#help1">Installation</a></h6>
+    <h6><a href="#help2">Support</a></h6>
+    <h6><a href="#help5">Frequently Asked Questions</a></h6>
+    <h6><a href="#help7">Known Problems</a></h6>
+    <h6><a href="#help8">Changelog</a></h6>
+    <h6><a href="#help9">Support Notes</a></h6>
+
+    
+    
+    
+    <h2 id="help1">Installation <a href="#wrapper" class="top">Back to top</a></h2>
+    <ol>
+      <li>First, make sure you are using valid <a href="http://www.alistapart.com/articles/doctype/" rel="nofollow">DOCTYPE</a></li>
+
+      <li>Include the jQuery library, the slider CSS file and the slider javascript in the head of the page(s) where you want to use the slider.
+<pre>
+&lt;script type="text/javascript" src="javascript/jquery.min.js"&gt;&lt;/script&gt;
+
+&lt;link rel="stylesheet" type="text/css" href="javascript/slider/themes/<strong>default</strong>/jquery.slider.css" /&gt;
+&lt;!--[if IE 6]&gt;
+&lt;link rel="stylesheet" type="text/css" href="javascript/slider/themes/<strong>default</strong>/jquery.slider.ie6.css" /&gt;
+&lt;![endif]--&gt;
+
+&lt;script type="text/javascript" src="javascript/slider/jquery.slider.min.js"&gt;&lt;/script&gt;
+</pre>
+      <p>Where <strong>default</strong> is the theme that you have chosen, and can be:</p>
+        <ul>
+          <li>default</li>
+          <li>carbono</li>
+          <li>fresh</li>
+          <li>minimalist</li>
+        </ul>
+      
+      </li>
+      
+      <li>Then, initialize the plugin. Put the following code before the closing tag of your body
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($) {
+    $(<strong>".myslider"</strong>).slideshow({
+      width      : 900,
+      height     : 360
+    });
+  });
+&lt;/script&gt;
+</pre>
+      </li>
+      
+      <li>The above code will take all images from the div 'myslider' and it will create the slideshow. Here is how it looks like that div:
+<pre>
+&lt;div <strong>class="myslider"</strong>&gt;
+  &lt;div&gt;
+    &lt;img src="assets/photo_1.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;img src="assets/photo_2.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;img src="assets/photo_3.jpg" alt=""/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      </li>
+      
+      <li>If you want a specific transition for each image put the class "jquery-slider-trans-ANIMATION" for each div where ANIMATION is the effect that you want. For example:
+<pre>
+&lt;div class="slider"&gt;
+  &lt;div class="<strong>jquery-slider-trans-explode</strong>"&gt;
+    &lt;img src="assets/photo_1.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  &lt;div class="<strong>jquery-slider-trans-fade</strong>"&gt;
+    &lt;img src="assets/photo_2.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  &lt;div class="<strong>jquery-slider-trans-squarerandom</strong>"&gt;
+    &lt;img src="assets/photo_3.jpg" alt=""/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      </li>
+      
+      <li>If you want the same transition for all images, add the option on the initialization:
+<pre>
+&lt;script type="text/javascript"&gt;
+  jQuery(document).ready(function($) {
+    $(".slider").slideshow({
+      width      : 900,
+      height     : 360,
+      <strong>transition : "explode"</strong>
+    });
+  });
+&lt;/script&gt;
+</pre>
+      <p>Where <strong>transition</strong> can be:</p>
+        <ul>
+          <li>fade</li>
+          <li>bar</li>
+          <li>barleft</li>
+          <li>barright</li>
+          <li>square</li>
+          <li>squarerandom</li>
+          <li>slide</li>
+          <li>slideleft</li>
+          <li>slideright</li>
+          <li>slidetop</li>
+          <li>slidebottom</li>
+          <li>fountain</li>
+          <li>rain</li>
+          <li>explode</li>
+          <li>exploderandom</li>
+        </ul>
+        <p><a href="transitions.html">See a live example of all transitions here.</a></p>
+      
+      </li>
+    
+</pre>
+      <li>These are the options (with their default values) that you can customize on the initialization:
+      
+<pre>
+navigation      : true, // Show navigation buttons (&laquo; &raquo;)
+selector        : true, // Show selector buttons (1 2 3 4 5)
+timer           : true, // Show timer (it may be different in each theme)
+control         : true, // Show control button (Play/Pause)
+
+pauseOnClick    : true, // Pause the slideshow when you click any button
+pauseOnHover    : true, // Pause the slideshow when you hover the slider
+loop            : true, // Slideshow will start from the beginning when the end is reached
+slideshow       : true, // Start the slideshow when page loads
+
+width           : 500,
+height          : 332,
+
+delay           : 4500, // in ms. Time between slides
+transition      : 'random',
+
+duration        : 400 // in ms. Speed of the animation
+bars            : 9, // Number of bars for "bar, fountain, rain"
+columns         : 7, // Number of columns for "square, explode"
+rows            : 3, // Number of rows for "square, explode"
+padding         : 8  // Width of padding in px for "explode"
+</pre>
+      
+      </li>
+
+    </ol>
+    
+    
+    
+    
+    
+    
+    
+
+    <h2 id="help2">Support <a href="#wrapper" class="top">Back to top</a></h2>
+    <p>This plugin supports the following browsers:</p>
+    <ul>
+      <li>Internet Explorer 6+</li>
+      <li>Firefox 2 +</li>
+      <li>Safari 3 +</li>
+      <li>Chrome 3 +</li>
+      <li>Opera 9 +</li>
+    </ul>
+
+    <p>Quirks mode is not supported in any browser, but that doesn't necessarily mean that it won't work. This means that you need to use either a strict or transitional DOCTYPE.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 id="help5">Frequently Asked Questions <a href="#wrapper" class="top">Back to top</a></h2>
+    <ol>
+      <li>
+        <strong>Can I use this script on my client's website?</strong>
+        <p>Yes. Your license includes the rights to use the script on any one website at a time. If you'd like to use the script as part of a service, please consider purchasing an Extended License.</p>
+      </li>
+      
+      
+      
+      <li>
+        <strong>Can I make modifications to this script?</strong>
+        <p>Feel free to make any modifications you need. Also feel free to blog and show it to your friends, but please do not redistribute the script with your changes. </p>
+      </li>
+      
+      
+      <li>
+        <strong>Why the script doesn't work?</strong>
+        <p>Make sure you don't have multiple versions of jquery in your page. Look at the source view in your browser to see what javascript files you are loading.</p>
+        <p>For example:</p>
+<pre>
+&lt;script src="crazy_path/<strong>jquery.js</strong>" type="text/javascript"&gt;&lt;/script&gt;
+...
+&lt;script src="crazy_path/<strong>jquery.min.js</strong>" type="text/javascript"&gt;&lt;/script&gt;
+...
+&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/<strong>jquery.min.js</strong>"&gt;&lt;/script&gt;
+</pre>
+        <p><strong>jquery.js</strong> and <strong>jquery.min.js</strong> are the same script. Delete the last one if you can. Keep only one.</p>
+      </li>
+
+      <li>
+        <strong>The slider is positioned incorrectly or behaving strangely in Internet Explorer</strong>
+        <p>This is likely a doctype issue. This plugin requires a valid doctype and rendering in quirks mode is not supported.
+         Make sure you are using the full doctype declaration to insure rendering in standards mode.</p>
+         
+         <p>This abbreviated doctype renders the document in quirks mode for Internet Explorer:</p>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+</pre>
+       <p>The doctype with URI renders in standards mode for all browsers:</p>
+<pre>
+&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+</pre>
+      </li>
+
+
+      <li>
+        <strong>Any plans for making it available for Wordpress?</strong>
+        <p><a href="http://codecanyon.net/item/slider-evolution-for-wordpress/244096">Click !</a></p>
+      </li>
+      
+
+    </ol>
+
+
+
+    <h2 id="help7">Known Problems <a href="#wrapper" class="top">Back to top</a></h2>
+    <ol>
+      <li>
+        <strong>No support for iPad</strong> (if someone wants to donate an iPad to me I'll guarantee support)
+      </li>
+      <li>In some instances performance may be slow in IE - this may be due to plugin conflicts or slow JavaScript performance in IE.</li>
+    </ol>
+
+
+    <h2 id="help8">Changelog <a href="#wrapper" class="top">Back to top</a></h2>
+<pre>
+1.1.6 (Jul 14 2011)
+* Fixed bug in IE6/7/8
+
+1.1.5 (Jun 08 2011)
+* Fixed compatibility problem with jQuery UI
+
+1.1.4 (May 30 2011)
+* Fixed bug in callSlide function
+
+1.1.3 (May 21 2011)
+* First release.
+</pre>
+
+
+    <h2 id="help9">Support Notes <a href="#wrapper" class="top">Back to top</a></h2>
+
+    <p>To be able to help solve a problem quickly, please read the entries below. I'll do my best to assist you. I provide a full range of Support except:</p>
+    <ol>
+      <li>I don't (and can't) support the 3rd-party code (i.e. external plugins, javascripts, flash players, etc.) In such cases you shall have to contact the authors.</li>
+      <li>I don't support errors provoked by the strong modification of the original packages.</li>
+      <li>I don't customize the packages in personal way.</li>
+      <li>I don't bring support for iPad/iPhone. If someone wants to donate an iPad to me I'll guarantee support.</li>
+      <li>If you sure that your improvement ideas will be helpful to others, please don't hesitate to share it with me. Most likely that it will became a free package update.</li>
+    </ol>
+    <p>If you have a more general question relating to scripts on CodeCanyon, you might consider visiting the <a href="http://codecanyon.net/forums/topic/codecanyon/65">forums</a> and asking your question in the "Item Discussion" section. Once again, thank you so much for purchasing this plugin.</p>
+
+    <div class="alert">
+      <p><a href="http://codecanyon.net/user/aeroalquimia">aeroalquimia</a> (Eduardo Daniel Sada)<br/>
+      <strong>Buenos Aires, Argentina.</strong> Apr 2011</p>
+    </div>
+    
+  </div><!--/wrapper-->
+</body>
+</html>

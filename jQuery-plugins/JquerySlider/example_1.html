@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Slider Evolution &raquo; Help File</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" type="text/css" href="help/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="help/css/style.css" />
+
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/carbono/jquery.slider.css" />
+  <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/carbono/jquery.slider.ie6.css" />
+  <![endif]-->
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/slider/jquery.slider.js"></script>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      $(".slider").slideshow({
+        width      : 900,
+        height     : 325,
+        transition : ['barLeft', 'barRight']
+      });
+    });
+  </script>
+
+</head>
+
+<body class="home">
+
+  <div id="wrapper">
+  
+    <h1 class="big">jQuery Slider Evolution</h1>
+    <h1 class="big">Documentation</h1>
+    <h2 class="big">By aeroalquimia</h2>
+    
+    
+    
+    
+    
+    
+    <div class="slider">
+      <div>
+        <img src="assets/slide_1.jpg" alt=""/>
+      </div>
+      
+      <div>
+        <img src="assets/slide_2.jpg" alt=""/>
+      </div>
+      
+      <div>
+        <img src="assets/slide_3.jpg" alt=""/>
+      </div>
+      
+      <div>
+        <img src="assets/slide_4.jpg" alt=""/>
+      </div>
+    </div>
+
+<h3>Source Code</h3>
+<h4>HTML</h4>
+<pre>
+&lt;div class="slider"&gt;
+  &lt;div&gt;
+    &lt;img src="assets/slide_1.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;img src="assets/slide_2.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;img src="assets/slide_3.jpg" alt=""/&gt;
+  &lt;/div&gt;
+  
+  &lt;div&gt;
+    &lt;img src="assets/slide_4.jpg" alt=""/&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<h4>Javascript</h4>
+<pre>
+jQuery(document).ready(function($) {
+  $(".slider").slideshow({
+    width      : 900,
+    height     : 325,
+    transition : ['barLeft', 'barRight']
+  });
+});
+</pre>
+
+
+
+
+   
+    <div class="alert">
+      <p><a href="http://codecanyon.net/user/aeroalquimia">aeroalquimia</a> (Eduardo Daniel Sada)<br/>
+      <strong>Buenos Aires, Argentina.</strong> Apr 2011</p>
+    </div>
+    
+  </div><!--/wrapper-->
+</body>
+</html>

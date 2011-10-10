@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Slider Evolution &raquo; Help File</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="stylesheet" type="text/css" href="help/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="help/css/style.css" />
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/default/jquery.slider.css" />
+  <!--[if IE 6]>
+  <link rel="stylesheet" type="text/css" href="javascript/slider/themes/default/jquery.slider.ie6.css" />
+  <![endif]-->
+  <script type="text/javascript" src="javascript/slider/jquery.slider.min.js"></script>
+
+
+  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'/>
+
+  <style type="text/css">
+  h1.cs3,
+  h3.cs3
+  {
+    margin:0 0 8px;
+    text-decoration:none;
+    border:0;
+    padding:0;
+    font-family: 'Bangers', arial, serif;
+    color:#FFFFFF;
+    text-shadow:2px 2px 1px #222222;
+  }
+
+  h1.cs3
+  {
+    font-size:80px;
+    line-height:60px;
+  }
+
+  h3.cs3
+  {
+    font-size:27px;
+  }
+
+  .slider-movie-example
+  {
+    width:300px;
+    height:100%;
+    background:#000000;
+    background:rgba(0,0,0,0.8);
+    color:#FFFFFF;
+    padding:10px;
+    position:absolute;
+    top:0;
+    left:20px;
+  }
+  </style>
+
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+    
+      $(".slider").slideshow({
+        width      : 900,
+        height     : 360,
+        transition : 'squareRandom'
+      });
+
+    });
+  </script>
+
+</head>
+
+<body class="home">
+
+  <div id="wrapper">
+
+    <h1 class="big">jQuery Slider Evolution</h1>
+    <h1 class="big">Documentation</h1>
+    <h2 class="big">By aeroalquimia</h2>
+
+
+
+
+
+
+    <div class="slider">
+
+      <div>
+        <div style="background:url(assets/html_1.jpg) no-repeat left top; width:900px; height:360px;">
+          <div style="padding:112px 0 30px 0; text-align:center;">
+            <h1 class="cs3">HTML CONTENT</h1>
+            <h3 class="cs3">Highlight me...I'm CSS3 font-face text.</h3>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="slider-movie-example">
+          <h4>Pirates of the Caribbean: On Stranger Tides</h4>
+          <br/>
+          <p>Captain Jack Sparrow (Depp) crosses paths with a woman from his past (Cruz), and he's not sure if it's love -- or if she's a ruthless con artist who's using him to find the fabled Fountain of Youth.</p><p>When she forces him aboard the Queen Anne's Revenge, the ship of the formidable pirate Blackbeard (McShane), Jack finds himself on an unexpected adventure in which he doesn't know who to fear more: Blackbeard or the woman from his past. </p>
+          <p><a href="http://www.imdb.com/title/tt1298650/" class="button">View</a></p>
+        </div>
+        <img src="assets/html_4.jpg" alt=""/>
+      </div>
+
+    </div>
+
+
+<h3>Source Code</h3>
+<h4>HTML</h4>
+<pre>
+&lt;div class="slider"&gt;
+
+  <strong>&lt;div&gt;</strong>
+    &lt;div style="background:url(assets/html_1.jpg) no-repeat left top; width:900px; height:360px;"&gt;
+      &lt;div style="padding:112px 0 30px 0; text-align:center;"&gt;
+        &lt;h1 class="cs3"&gt;HTML CONTENT&lt;/h1&gt;
+        &lt;h3 class="cs3"&gt;Highlight me...I'm CSS3 font-face text.&lt;/h3&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  <strong>&lt;/div&gt;</strong>
+
+  <strong>&lt;div&gt;</strong>
+    &lt;div class="slider-movie-example"&gt;
+      &lt;h4&gt;Pirates of the Caribbean: On Stranger Tides&lt;/h4&gt;
+      &lt;br/&gt;
+      &lt;p&gt;Captain Jack Sparrow (Depp) crosses paths with a woman from his past (Cruz)... &lt;/p&gt;
+      &lt;p&gt;&lt;a href="http://www.imdb.com/title/tt1298650/" class="button"&gt;View&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;img src="assets/html_4.jpg" alt=""/&gt;
+  <strong>&lt;/div&gt;</strong>
+
+&lt;/div&gt;
+</pre>
+
+
+<h4>CSS</h4>
+<pre>
+h1.cs3,
+h3.cs3
+{
+  margin:0 0 8px;
+  text-decoration:none;
+  border:0;
+  padding:0;
+  font-family: 'Bangers', arial, serif;
+  color:#FFFFFF;
+  text-shadow:2px 2px 1px #222222;
+}
+
+h1.cs3
+{
+  font-size:80px;
+  line-height:60px;
+}
+
+h3.cs3
+{
+  font-size:27px;
+}
+
+.slider-movie-example
+{
+  width:300px;
+  height:100%;
+  background:rgba(0,0,0,0.8);
+  color:#FFFFFF;
+  padding:10px;
+  position:absolute;
+  top:0;
+  left:20px;
+}
+</pre>
+
+<h4>Javascript</h4>
+<pre>
+jQuery(document).ready(function($) {
+
+  $(".slider").slideshow({
+    width      : 900,
+    height     : 360,
+    transition : 'squareRandom'
+  });
+
+});
+</pre>
+
+
+
+    <div class="alert">
+      <p><a href="http://codecanyon.net/user/aeroalquimia">aeroalquimia</a> (Eduardo Daniel Sada)<br/>
+      <strong>Buenos Aires, Argentina.</strong> Apr 2011</p>
+    </div>
+
+  </div><!--/wrapper-->
+</body>
+</html>
