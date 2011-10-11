@@ -31,11 +31,11 @@ body
 
 .overlay {width:314px; height:455px;background-image:url(../../images/overlay.png); left:20px; position:absolute; top:0; z-index:2;}
 
-.overlay .container p{ font-family:arail,helvetica,sans-serif; color:White; text-align:left; width:270px; padding:5px 0 5px 0; font-size:12px;}
+.overlay .outercontainer p{ font-family:arail,helvetica,sans-serif; color:White; text-align:left; width:270px; padding:5px 0 5px 0; font-size:12px;}
 
-.overlay .container{width:276px; padding-top:86px; padding-left:27px; padding-right:10px;}
+.overlay .outercontainer{width:276px; padding-top:86px; padding-left:27px; padding-right:10px;}
 
-.overlay .container img{padding-bottom:10px;}
+.overlay .outercontainer img{padding-bottom:10px;}
 
 
 .p15{font-size:15px !important;}

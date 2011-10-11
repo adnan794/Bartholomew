@@ -70,12 +70,12 @@
           <!-- site navigation -->
           <div id="nav">
        		 <ul id="navlist">
-        		<li><a href="home.html"  class="active"  >Home</a></li>
+        		<!--<li><a href="home.html"  class="active"  >Home</a></li>
         		<li><a href="private_commissions.html">Private Commissions</a></li>
         		<li><a href="about_us.html">About Us</a></li>
        			<li><a href="investments.html">Investments</a></li>
         		<li><a href="gallery.html">Gallery</a></li>
-        		<li><a href="contact_us.html">Contact Us</a></li>
+        		<li><a href="contact_us.html">Contact Us</a></li>-->
         	</ul>
          </div>
         <!-- end navdiv -->
@@ -107,12 +107,60 @@
             <div class="outercontainer">
                 <p><img src="images/welcome.png" width="249" height="44" alt="Welcome to Bartholomew Homes" /></p>
                 <p class="p15">We are luxury house builders committed to procur our clients projects to the most exacting of standards. </p>
-                <p>From period mansions to contemporary villas, 
+                
+                  
+                  
+                  
+                  <!-- THIS SECTION IS FOR SROLLING TEXT AREA -->
+                  
+                  <div id="mcs_container">
+	<div class="customScrollBox">
+		<div class="container">
+    		<div class="content">
+        		<p>From period mansions to contemporary villas, 
                    our aim is to combine inspirational and effective design with the very latest construction techniques.</p>
                <p>By employing this approach we have successfully completed  a varied portfolio of prestigious properties in some
      			  of the country's finest locations.</p>
+                  
+                  <p>From period mansions to contemporary villas, 
+                   our aim is to combine inspirational and effective design with the very latest construction techniques.</p>
+               <p>By employing this approach we have successfully completed  a varied portfolio of prestigious properties in some
+     			  of the country's finest locations.</p>
+                  
+                 <p>From period mansions to contemporary villas, 
+                   our aim is to combine inspirational and effective design with the very latest construction techniques.</p>
+               
+			</div>
+		</div>
+		<div class="dragger_container">
+    		<div class="dragger"></div>
+		</div>
+	</div>
+    <a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a>
+</div>
+
+
+
+
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
              </div> 
-             <!-- end container div -->
+             <!-- end outercontainer div -->
         </div>
         <!-- end overlay div -->
        </div>
@@ -129,5 +177,43 @@
          <!-- end footer div -->
     </div>
     <!-- end main wrapper div -->
+    
+    <script>
+$(window).load(function() {
+	mCustomScrollbars();
+});
+
+function mCustomScrollbars(){
+	/* 
+	malihu custom scrollbar function parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+	$("#mcs_container").mCustomScrollbar("vertical",300,"easeOutCirc",1.05,"auto","yes","yes",15); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+	$("#"+id+" .customScrollBox .content").load(file,function(){
+		mCustomScrollbars();
+	});
+}
+</script>
+<script src="jquery.mCustomScrollbar.js"></script>
     </body>
     </html>
