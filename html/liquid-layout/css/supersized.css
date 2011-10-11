@@ -1,44 +1,47 @@
 /*
-
 	Supersized - Fullscreen Slideshow jQuery Plugin
-	Version : 3.2.4
-	Site	: www.buildinternet.com/project/supersized
+	Version 3.1.3
+	www.buildinternet.com/project/supersized
 	
-	Author	: Sam Dunn
-	Company : One Mighty Roar (www.onemightyroar.com)
-	License : MIT License / GPL License
-	
+	By Sam Dunn / One Mighty Roar (www.onemightyroar.com)
+	Released under MIT License / GPL License
 */
 
 * { margin:0; padding:0; }
-body { background:#111; height:100%; }
-	img { border:none; }
+body { background:#000;  }
+	img{ border:none; }
 	
-	#header {height: 158px; margin: 0px 20px; background-image:url(../img/header.jpg); }
-	
-	#footer {font-family: Arial, Helvetica, sans-serif; font-size:10px; color: #FFFFFF; padding:35px 0 0 0px;
-	margin:0 auto; height:62px; width:100%; bottom:0px; left:0; z-index:4; background:url(../img/nav-bg.png) repeat-x; position:fixed;
-	border-left: 20px solid #000000; border-right: 20px solid #000000;}
-	
-	#footer a {color:#FFFFFF; text-decoration:none;}
+	#header {height: 146px; background-repeat:repeat-x; margin: 0px 20px; background-image:url(../img/header.jpg); }
 	
 	
 	
-	#supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background:url(../img/progress.gif) no-repeat center center;}
 	
-	#supersized {  display:block; position:fixed; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
-		#supersized img { width:auto; height:auto; position:relative; display:none; outline:none; border:none; }
+	
+	
+	#supersized-loader { position:absolute; top:50%; left:50%; z-index:10; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background-color:#111; background:rgba(0,0,0,0.8) url(../img/progress.gif) no-repeat center center; -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px;}
+	
+	#supersized {position:fixed; border-left: 20px solid #000000; border-right: 20px solid #000000;  left:0; top:128px; right:0; overflow:hidden; z-index:-999; height:100%; width:auto; }
+		#supersized img{ width:auto; height:auto; position:relative; display:none; outline:none; border:none; margin-right:60px;}
 			#supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }	/*Speed*/
 			#supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }			/*Quality*/
 		
-		#supersized li { display:block; list-style:none; z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; }
-		#supersized a { width:100%; height:100%; display:block; }
-			#supersized li.prevslide { z-index:-20; }
-			#supersized li.activeslide { z-index:-10; }
-			#supersized li.image-loading { background:#111 url(../img/progress.gif) no-repeat center center; width:100%; height:100%; }
-				#supersized li.image-loading img{ visibility:hidden; }
-			#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
-			
-			
-			
-			
+		#supersized a { z-index:-30; position:absolute; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#000;}
+			#supersized a.prevslide { z-index:-20; }
+			#supersized a.activeslide { z-index:-10; }
+			#supersized a.prevslide img, #supersized a.activeslide img{ display:inline; }
+	
+	/*Controls Section*/
+	#controls-wrapper { margin:0 auto; height:62px; width:100%; bottom:0; left:0; z-index:4; background:url(../img/nav-bg.png) repeat-x; position:fixed; }
+		#controls { overflow:hidden; height:100%; text-align:left; z-index:5; padding:35px 0 0 0px; font-family: Arial, Helvetica, sans-serif; font-size:10px; color: #FFFFFF;  /* Increase padding to give thumbnails room */ border-left: 20px solid #000000; border-right: 20px solid #000000;}
+		#controls a {color:#FFFFFF; text-decoration:none;}
+			#slidecounter { float:left; color:#888; font:23px "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:bold; text-shadow:#000 0 -1px 0; margin:19px 10px 18px 20px; }
+			#slidecaption { overflow:hidden; float:left; color:#FFF; font:16px "Helvetica Neue", Helvetica, Arial, sans-serif; font-weight:bold; text-shadow:#000 0 2px 0; margin:23px 20px 23px 0; }
+			#navigation { float:right; margin:10px 20px 0 0; }
+	
+	/*Thumbnail Navigation*/	
+	#nextthumb,#prevthumb { z-index:6; display:none; position:fixed; bottom:12px; height:75px; width:100px; overflow:hidden; background:#ddd; border:2px solid #fff; -webkit-box-shadow:0 0 5px #000; }
+		#nextthumb { right:12px; }
+		#prevthumb { left:12px; }
+			#nextthumb img, #prevthumb img { width:150px; height:auto;  }
+			#nextthumb:active, #prevthumb:active { bottom:10px; }
+			#navigation > :hover,#nextthumb:hover, #prevthumb:hover { cursor:pointer; }
