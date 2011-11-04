@@ -1,0 +1,259 @@
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <title>Welcome to Bartholomew Homes</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+      <meta name="robots" content="index, follow" />
+    
+      <link rel="stylesheet" type="text/css" href="help/css/reset.css" />
+      <link rel="stylesheet" type="text/css" href="help/css/style.css" />
+    
+      <link rel="stylesheet" type="text/css" href="javascript/slider/themes/default/jquery.slider.css" />
+      <!--[if IE 6]>
+      <link rel="stylesheet" type="text/css" href="javascript/slider/themes/carbono/jquery.slider.ie6.css" />
+      <![endif]-->
+    
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+      <script type="text/javascript" src="javascript/slider/jquery.slider.js"></script>
+	  
+	    <!-- SCRIPTS AND STYLES FOR SCROLL BAR -->
+      <link href="css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+      <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	  <script type="text/javascript" src="javascript/jquery.easing.1.3.js"></script>
+	  <script type="text/javascript" src="javascript/jquery.mousewheel.min.js"></script>
+      
+       <!-- END SCRIPTS AND STYLES FOR SCROLL BAR -->
+       <script type="text/javascript" src="iscroll.js?v=2.1"></script>
+       
+       <script type="text/javascript">
+var myScroll;
+
+function loaded() {
+	setTimeout( function() {
+		document.ontouchmove = function(e) { e.preventDefault(); return false; }
+		myScroll = new iScroll( document.getElementById('scroller') );
+	}, 100);
+	
+}
+
+window.addEventListener('load', loaded, true);
+</script>
+
+<style type="text/css" media="all">
+
+#wrapper {
+	position:relative;	/* needed */
+	z-index:1;			/* needed and important */
+	height:200px;		/* needed */
+	overflow:hidden;	/* suggested */
+	background-color:blue;
+}
+
+#scroller {
+	position:absolute;	/* optional. Seems to work with absolute, relative and without it */
+	top:0;				/* optional */
+
+	width:300px;
+	padding:10px;
+	background:#eee;
+}
+
+#scroller strong {
+	font-size:200%;
+}
+
+</style>
+       
+       
+       
+       
+    
+      <script type="text/javascript">
+        jQuery(document).ready(function($) {
+          $(".slider").slideshow({
+            width      : 960,
+            timer      : false,
+            pauseOnClick    : false, // Pause the slideshow when you click any button
+            duration   : 1200, // in ms. Speed of the animation
+            delay      : 5000, // in ms. Time between slides
+            pauseOnHover    : false, // Pause the slideshow when you hover the slider
+            height     : 435,
+            control    : false,
+            loop       : true, // Slideshow will start from the beginning when the end is reached
+            slideshow  : true, // Start the slideshow when page loads
+            transition : 'fade'
+          });
+        });
+      </script>
+    
+    <style type="text/css">
+    <!--
+    body {
+        margin-left: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        background-color: #000000;
+        text-align:center;
+    }
+    -->
+    </style>
+    <meta name = "viewport" content = "initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no, width = device-width">
+    </head>
+    <body class="home">
+    <!-- Wrapper for the entire site -->
+    <div id="site-wrapper">
+        <!-- Site header -->
+        <div id="header">
+          <div id="logo"><img src="images/Logo.jpg" width="327" height="148" /></div>
+          <!-- site navigation -->
+          <div id="nav">
+       		 <ul id="navlist">
+        		<li><a href="index.html">Home</a></li>
+        		<li><a href="private_commissions.html">Private Commissions</a></li>
+        		<li><a href="about_us.html">About Us</a></li>
+       			<li><a href="investments.html"  class="active"  >Investments</a></li>
+        		<li><a href="gallery.html">Gallery</a></li>
+        		<li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+            
+         </div>
+         
+         <div id="social">
+                 	<img src="images/facebook_32.jpg" alt="Facebook" border="0" />
+                    <a href="http://www.linkedin.com/pub/iain-bartholomew/32/311/251" target="_blank"><img src="images/linkedin_32.jpg" alt="LinkedIn" border="0" /></a> </div>
+        <!-- end navdiv -->
+        </div>
+        <!-- end header div -->
+        
+        <!-- Wrapper for jQuery slider and overlay text -->
+        <div class="content-wrapper">
+        	<div class="slider">
+         	 	<div>
+            		<img src="images/InvestmentImage01.jpg" alt="" width="920" height="436"/>      </div>
+          		<div>
+            		<img src="images/InvestmentImage02.jpg" alt="" width="920" height="436"/>      </div>
+
+        	</div>
+             <!-- end slider div -->
+             
+        <!-- This area controls the text section that appears on top of images -->
+        <div class="overlay">
+            <div class="outercontainer">
+                <p><img src="images/investments.png" width="249" height="21" alt="Investments" /></p>
+               
+
+                 <div id="wrapper">
+	<div id="scroller">
+		<p><strong>Scroll Me!</strong><p>
+		<p class="bigger">This is a demo to get iPhone scroll inside a fixed height DIV. Since it relies on gestures, it works only on iPhone/iPod touch and not on Safari for Mac.<br /><a href="http://cubiq.org/scrolling-div-on-iphone-ipod-touch/5">Read more about this on my blog</a>.<br /></p>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+		<p><strong>Welcome to middle</strong><p>
+		<p class="bigger">This is a demo to get iPhone scroll inside a fixed height DIV. Since it relies on gestures, it works only on iPhone/iPod touch and not on Safari for Mac.<br /><a href="http://cubiq.org/scrolling-div-on-iphone-ipod-touch/5">Read more about this on my blog</a>.<br /></p>
+		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+		<p id="a"><strong>End of scrolling</strong><p>
+	</div>
+</div>
+                   
+				   
+				   
+				   
+				     <!-- THIS SECTION IS FOR SROLLING TEXT AREA 
+                  
+   <div id="mcs_container">
+	<div class="customScrollBox">
+		<div class="container">
+    		<div class="content">
+		 <p class="p15">For those clients looking to expand their investment portfolio&#8217;s,
+our cutting edge apartments are aimed at the &#8216;affordable end&#8217; 
+of the buoyant Residential Lettings Market</p>
+                <p>In order to maximize Returns on Investment, we restrict volume
+to small select developments and combine a fresh contemporary
+appearance with the technical benefits of our luxury properties. </p>
+                <p>Touch screen technology controls energy efficiency, extensive
+CCTV images and LED mood lighting. Sustainable items include
+Rainwater harvesting and air source heat pumps.</p>
+<p>Purchase prices for investors are linked to rental income ensuring
+An attractive return, while sales values sit comfortably within the 
+&#8216;Starter home&#8217; bracket.</p>
+
+<p>For further information contact <a href="mailto:iain@bartholomewhomes.com">info@bartholomewhomes.com</a></p>
+               
+			</div>
+		</div>
+		<div class="dragger_container">
+    		<div class="dragger"></div>
+		</div>
+	</div>
+    <a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a>
+</div>-->
+
+
+
+
+
+
+
+
+
+				   
+             </div> 
+             <!-- end outercontainer div -->
+        </div>
+        <!-- end overlay div -->
+       </div>
+       <!-- end contentWrapper div -->
+       
+       <!-- footer -->
+       <div class="footer">
+       		<div class="contents">
+        		<p><span class="colorgrey">Bartholomew Homes </span>18a Victoria Rd, Hale, Altrincham, Cheshire WA15 9AD t: 0161 929 9988 f: 0161 929 9876 e: 
+                							<a href="mailto:info@bartholomewhomes.com">info@bartholomewhomes.com</a></p>
+        	</div>
+             <!-- end contents div -->
+        </div>
+         <!-- end footer div -->
+    </div>
+    <!-- end main wrapper div -->
+	<script>
+$(window).load(function() {
+	mCustomScrollbars();
+});
+
+function mCustomScrollbars(){
+	/* 
+	malihu custom scrollbar function parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+	$("#mcs_container").mCustomScrollbar("vertical",300,"easeOutCirc",1.05,"auto","yes","yes",15); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+	$("#"+id+" .customScrollBox .content").load(file,function(){
+		mCustomScrollbars();
+	});
+}
+</script>
+<script src="javascript/jquery.mCustomScrollbar.js"></script>
+	
+	
+    </body>
+    </html>

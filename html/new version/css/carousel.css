@@ -1,0 +1,10 @@
+.carousel { width:959px; height:82px; overflow:hidden; position:relative; margin-top:20px }
+.carousel .thumbs_wrap { margin-left:21px; width:919px; overflow:hidden}
+.carousel .thumbs { width:10000px; }
+.carousel .thumbs div { float:left; margin-right:6px; border:2px solid black; }
+.carousel .left { float:left; width:12px; height:16px; position:absolute; left:0; top:32px }
+.carousel .left a { float:left; width:12px; height:16px; display:block; background:url(../images/carousel-left.gif) left top no-repeat; overflow:hidden; text-decoration:none; outline:none }
+.carousel .right { float:left; width:12px; height:16px; position:absolute; right:0; top:32px }
+.carousel .right a { float:left; width:12px; height:16px; display:block; background:url(../images/carousel-right.gif) left top no-repeat; overflow:hidden; text-decoration:none; outline:none }
+.carousel .selector { width:122px; height:78px; background:url(../images/thumb-selected.gif) left top no-repeat; }
+.carousel .thumbs div.selected { border:2px solid white; }
