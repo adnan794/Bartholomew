@@ -24,6 +24,91 @@
 	  <script type="text/javascript" src="javascript/jquery.mousewheel.min.js"></script>
       
        <!-- END SCRIPTS AND STYLES FOR SCROLL BAR -->
+       
+               <!-- Code for iPad Funcionality -->
+     
+       <script type="text/javascript" src="javascript/iscroll.js?v=2.1"></script>
+       
+         <script type="text/javascript">
+             function isiPad() {
+                 return (navigator.platform.indexOf("iPad") != -1);
+             }
+             function displaymessage() {
+                 //alert("Hello World!");
+                 if (isiPad()) {
+
+                     replaceContent2();
+                     loaded();
+                 }
+                 else {
+
+                     replaceContent();
+                 }
+             }
+             function replaceContent() {
+
+                 $('div#iPadWrapper')
+  .html('<div id="mcs_container"><div class="customScrollBox"><div class="container"><div class="content"><p class="p15">Bartholomew Homes have been building and project managing individually tailored properties for over 20 years.</p><p>During this time we have retained the services of some of the finest Professionals and tradesman available and only engage the most highlyregarded of specialist sub-contractors.</p><p>Our management team of Iain Bartholomew and Dave Mackey share a combined development experience of over 60 years and are well placed to gently guide and advise our clients on all aspects of the construction and design process.</p> <p>By purposely restricting the number of building contracts at any one time, we remain readily available on a daily basis to anticipate decisions and to apply the attention to detail synonymous with properties at the forefront of luxury development.</p></div></div><div class="dragger_container"><div class="dragger"></div></div></div><a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a></div>');
+
+             }
+
+             function replaceContent2() {
+
+                 $('div#iPadWrapper')
+  .html('<div id="wrapper2"><div id="scroller"><p class="p15">Bartholomew Homes have been building and project managing individually tailored properties for over 20 years.</p><p>During this time we have retained the services of some of the finest Professionals and tradesman available and only engage the most highlyregarded of specialist sub-contractors.</p><p>Our management team of Iain Bartholomew and Dave Mackey share a combined development experience of over 60 years and are well placed to gently guide and advise our clients on all aspects of the construction and design process.</p> <p>By purposely restricting the number of building contracts at any one time, we remain readily available on a daily basis to anticipate decisions and to apply the attention to detail synonymous with properties at the forefront of luxury development.</p></div></div>');
+
+             }
+</script>
+       
+       
+      <script type="text/javascript">
+          var myScroll;
+
+          function loaded() {
+              setTimeout(function() {
+                  document.ontouchmove = function(e) { e.preventDefault(); return false; }
+                  myScroll = new iScroll(document.getElementById('scroller'));
+              }, 100);
+
+          }
+
+          window.addEventListener('load', displaymessage, true);
+</script>
+
+<style type="text/css" media="all">
+
+#wrapper2 {
+	position:relative;	/* needed */
+	z-index:1;			/* needed and important */
+	height:245px;		/* needed */
+	overflow:hidden;	/* suggested */
+	
+	
+}
+
+#scroller {
+	position:absolute;	/* optional. Seems to work with absolute, relative and without it */
+	top:0;				/* optional */
+	width:273px;
+	padding-top:5px;
+	background:transparent;
+}
+
+
+
+#mcs_container
+{
+    /*visibility:hidden;*/
+}
+</style>
+
+ <!-- Code for iPad Funcionality -->
+       
+       
+       
+       
+       
+       
     
       <script type="text/javascript">
         jQuery(document).ready(function($) {
@@ -109,9 +194,9 @@
             <div class="outercontainer">
                 <p><img src="images/about_us.png" width="249" height="21" alt="About Us" /></p>
                 
-                  
+                  <div id="iPadWrapper">
 
-				    <!-- THIS SECTION IS FOR SROLLING TEXT AREA -->
+				    <!-- THIS SECTION IS FOR SROLLING TEXT AREA 
                   
    <div id="mcs_container">
 	<div class="customScrollBox">
@@ -141,9 +226,9 @@ luxury development.
 		</div>
 	</div>
     <a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a>
-</div>
+</div>-->
 				  
-				  
+</div> <!-- end iPad Wrapper -->				  
 				  
 				  
 				  

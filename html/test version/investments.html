@@ -24,9 +24,45 @@
 	  <script type="text/javascript" src="javascript/jquery.mousewheel.min.js"></script>
       
        <!-- END SCRIPTS AND STYLES FOR SCROLL BAR -->
-       <script type="text/javascript" src="iscroll.js?v=2.1"></script>
        
-       <script type="text/javascript">
+       
+        <!-- Code for iPad Funcionality -->
+     
+       <script type="text/javascript" src="javascript/iscroll.js?v=2.1"></script>
+       
+         <script type="text/javascript">
+             function isiPad() {
+                 return (navigator.platform.indexOf("iPad") != -1);
+             }
+             function displaymessage() {
+                 //alert("Hello World!");
+                 if (isiPad()) {
+      
+                     replaceContent2();
+                     loaded();
+                 }
+                 else {
+
+                     replaceContent();
+                 }
+             }
+             function replaceContent() {
+
+                 $('div#iPadWrapper')
+  .html('<div id="mcs_container"><div class="customScrollBox"><div class="container"><div class="content"><p class="p15">For those clients looking to expand their investment portfolio&#8217;s, our cutting edge apartments are aimed at the &#8216;affordable end&#8217; of the buoyant Residential Lettings Market</p><p>In order to maximize Returns on Investment, we restrict volume to small select developments and combine a fresh contemporary appearance with the technical benefits of our luxury properties. </p><p>Touch screen technology controls energy efficiency, extensive CCTV images and LED mood lighting. Sustainable items include Rainwater harvesting and air source heat pumps.</p><p>Purchase prices for investors are linked to rental income ensuring An attractive return, while sales values sit comfortably within the &#8216;Starter home&#8217; bracket.</p><p>For further information contact <a href="mailto:iain@bartholomewhomes.com">info@bartholomewhomes.com</a></p></div></div><div class="dragger_container"><div class="dragger"></div></div></div><a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a></div>');
+                 
+             }
+
+             function replaceContent2() {
+
+                 $('div#iPadWrapper')
+  .html('<div id="wrapper2"><div id="scroller"><p class="p15">For those clients looking to expand their investment portfolio&#8217;s, our cutting edge apartments are aimed at the &#8216;affordable end&#8217; of the buoyant Residential Lettings Market</p><p>In order to maximize Returns on Investment, we restrict volume to small select developments and combine a fresh contemporary appearance with the technical benefits of our luxury properties. </p><p>Touch screen technology controls energy efficiency, extensive CCTV images and LED mood lighting. Sustainable items include Rainwater harvesting and air source heat pumps.</p><p>Purchase prices for investors are linked to rental income ensuring An attractive return, while sales values sit comfortably within the &#8216;Starter home&#8217; bracket.</p><p>For further information contact <a href="mailto:iain@bartholomewhomes.com">info@bartholomewhomes.com</a></p></p></div></div>');
+
+             }
+</script>
+       
+       
+      <script type="text/javascript">
 var myScroll;
 
 function loaded() {
@@ -37,34 +73,39 @@ function loaded() {
 	
 }
 
-window.addEventListener('load', loaded, true);
+window.addEventListener('load', displaymessage, true);
 </script>
 
 <style type="text/css" media="all">
 
-#wrapper {
+#wrapper2 {
 	position:relative;	/* needed */
 	z-index:1;			/* needed and important */
-	height:200px;		/* needed */
+	height:245px;		/* needed */
 	overflow:hidden;	/* suggested */
-	background-color:blue;
+	
+	
 }
 
 #scroller {
 	position:absolute;	/* optional. Seems to work with absolute, relative and without it */
 	top:0;				/* optional */
-
-	width:300px;
-	padding:10px;
-	background:#eee;
+	width:273px;
+	padding-top:5px;
+	background:transparent;
 }
 
-#scroller strong {
-	font-size:200%;
-}
 
+
+#mcs_container
+{
+    /*visibility:hidden;*/
+}
 </style>
+
+ <!-- Code for iPad Funcionality -->
        
+      
        
        
        
@@ -103,7 +144,7 @@ window.addEventListener('load', loaded, true);
     </head>
     <body class="home">
     <!-- Wrapper for the entire site -->
-    <div id="site-wrapper">
+    <div id="wrapper">
         <!-- Site header -->
         <div id="header">
           <div id="logo"><img src="images/Logo.jpg" width="327" height="148" /></div>
@@ -116,6 +157,7 @@ window.addEventListener('load', loaded, true);
        			<li><a href="investments.html"  class="active"  >Investments</a></li>
         		<li><a href="gallery.html">Gallery</a></li>
         		<li><a href="contact_us.html">Contact Us</a></li>
+        		
             </ul>
             
          </div>
@@ -128,6 +170,8 @@ window.addEventListener('load', loaded, true);
         <!-- end header div -->
         
         <!-- Wrapper for jQuery slider and overlay text -->
+        
+        
         <div class="content-wrapper">
         	<div class="slider">
          	 	<div>
@@ -140,26 +184,17 @@ window.addEventListener('load', loaded, true);
              
         <!-- This area controls the text section that appears on top of images -->
         <div class="overlay">
+     
             <div class="outercontainer">
                 <p><img src="images/investments.png" width="249" height="21" alt="Investments" /></p>
                
+           <div id="iPadWrapper">
 
-                 <div id="wrapper">
-	<div id="scroller">
-		<p><strong>Scroll Me!</strong><p>
-		<p class="bigger">This is a demo to get iPhone scroll inside a fixed height DIV. Since it relies on gestures, it works only on iPhone/iPod touch and not on Safari for Mac.<br /><a href="http://cubiq.org/scrolling-div-on-iphone-ipod-touch/5">Read more about this on my blog</a>.<br /></p>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-		<p><strong>Welcome to middle</strong><p>
-		<p class="bigger">This is a demo to get iPhone scroll inside a fixed height DIV. Since it relies on gestures, it works only on iPhone/iPod touch and not on Safari for Mac.<br /><a href="http://cubiq.org/scrolling-div-on-iphone-ipod-touch/5">Read more about this on my blog</a>.<br /></p>
-		<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-		<p id="a"><strong>End of scrolling</strong><p>
-	</div>
-</div>
                    
 				   
 				   
 				   
-				     <!-- THIS SECTION IS FOR SROLLING TEXT AREA 
+  <!-- THIS SECTION IS FOR SROLLING TEXT AREA 
                   
    <div id="mcs_container">
 	<div class="customScrollBox">
@@ -187,12 +222,14 @@ An attractive return, while sales values sit comfortably within the
 		</div>
 	</div>
     <a href="#" class="scrollUpBtn"></a> <a href="#" class="scrollDownBtn"></a>
-</div>-->
+</div>
+
+-->
+   
 
 
 
-
-
+</div> <!-- end iPadWrapper -->
 
 
 
